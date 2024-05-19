@@ -1,0 +1,11 @@
+Model Information:
+* title:	Book Test
+* source:	https://sketchfab.com/3d-models/book-test-255c5fa36d28430591cdf7a3142da91e
+* author:	Natalija.Soto (https://sketchfab.com/Natalija.Soto)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Book Test" (https://sketchfab.com/3d-models/book-test-255c5fa36d28430591cdf7a3142da91e) by Natalija.Soto (https://sketchfab.com/Natalija.Soto) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
