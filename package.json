@@ -1,7 +1,6 @@
 {
   "name": "Babel",
-  "packageManager": "yarn@4.2.2",
-  "scripts":{
+"scripts":{
     "start": "node main.js"
   },
   "dependecies":{
