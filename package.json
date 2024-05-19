@@ -1,0 +1,13 @@
+{
+  "name": "Babel",
+  "packageManager": "yarn@4.2.2",
+  "scripts":{
+    "start": "node main.js"
+  },
+  "dependecies":{
+    "express":"^4.18.2"
+  },
+  "engines": {
+    "node": ">=14"
+  }
+}
