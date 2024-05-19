@@ -1,0 +1,12 @@
+{
+  "name": "Babel",
+  "scripts": {
+    "start": "node main.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  },
+  "engines": {
+    "node": ">=14"
+  }
+}
