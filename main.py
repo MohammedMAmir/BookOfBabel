@@ -3,7 +3,7 @@ app =  Flask(__name__)
 
 @app.route('/')
 def index():
-    return '<h1>Hello Dingus!</h1>'
+    return '<h1>Hello Dingus!</h1><img src="kookie.png">'
 
 app.add_url_rule('/', 'index', index)
 
