@@ -5,6 +5,7 @@
   },
   "dependencies": {
     "express": "^4.19.2",
+    "express3-handlebars": "^0.5.2",
     "three": "^0.164.1"
   },
   "engines": {

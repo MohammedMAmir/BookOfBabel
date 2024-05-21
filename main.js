@@ -1,14 +1,39 @@
-const express = require("express");
-const app = express();
-const port = process.env.PORT || 3001;
+//Setup
+var express = require("express");
+var app = express();
+app.set('port', process.env.PORT || 3000)
+app.use(express.static(__dirname + "/public"));
+//set up handlebars view engine
+var handlebars = require()
 
-app.use("/public/images", express.static("images"));
+//-----TODO:-----
+//custom 404 page
+app.use(function(req, res){
+    res.type('text/plain');
+    res.status(404);
+    res.send('404 - Not Found');
+});
 
-app.get("/", (req, res) => res.type('html').send(html));
+app.use(function(err, req, res, next){
+    console.error(err.stack);
+    res.type('text/plain');
+    res.status(500);
+    res.send('500 - Server Error');
+});
 
-const server = app.listen(port, () => console.log(`Example app listening on port ${port}!`));
+app.listen(app.get('port'), function(){
+    console.log('Express started on http:localhost:' + app.get('port')+
+    '; press Ctrl-C to terminate.');
+}); 
 
-server.keepAliveTimeout = 120 * 1000;
-server.headersTimeout = 120 * 1000;
+app.get('/', function(req, res){
+    res.type('text/plain');
+    res.send('The Book of Babel | Atlas');
+});
 
-const html = `<h1>Hey Dingus!</h1><img src="/images/kookie.png">`
+app.get('/champions', function(req, res){
+    res.type('text/plain');
+    res.send('The Book of Babel | Champions of Elaria');
+})
+
+const html = `<h1>Hey Dingus!</h1><img src="/public/images/kookie.png">`
