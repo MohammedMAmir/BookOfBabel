@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 const port = process.env.PORT || 3001;
 
-app.use("/images", express.static("images"));
+app.use("/public/images", express.static("images"));
 
 app.get("/", (req, res) => res.type('html').send(html));
 
