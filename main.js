@@ -3,6 +3,7 @@ var express = require("express");
 var app = express();
 app.set('port', process.env.PORT || 3000)
 app.use(express.static(__dirname + "/public"));
+
 //set up handlebars view engine
 var handlebars = require("express3-handlebars").create(
     {defaultLayout: 'main'}
@@ -23,7 +24,6 @@ app.get('/champions', function(req, res){
 //-----TODO:-----
 //custom 404 page
 app.use(function(req, res){
-    res.type('text/plain');
     res.status(404);
     res.render('404');
 });
