@@ -13,13 +13,11 @@ app.set('view engine', 'handlebars');
 
 //-----VIEWS-----
 app.get('/', function(req, res){
-    res.type('text/plain');
-    res.send('The Book of Babel | Atlas');
+    res.render('home');
 });
 
 app.get('/champions', function(req, res){
-    res.type('text/plain');
-    res.send('The Book of Babel | Champions of Elaria');
+    res.render('about');
 })
 
 //-----TODO:-----
@@ -27,14 +25,14 @@ app.get('/champions', function(req, res){
 app.use(function(req, res){
     res.type('text/plain');
     res.status(404);
-    res.send('404 - Not Found');
+    res.render('404');
 });
 
 app.use(function(err, req, res, next){
     console.error(err.stack);
     res.type('text/plain');
     res.status(500);
-    res.send('500 - Server Error');
+    res.render('500');
 });
 
 app.listen(app.get('port'), function(){
