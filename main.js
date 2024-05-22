@@ -13,11 +13,11 @@ app.set('view engine', 'handlebars');
 
 //-----VIEWS-----
 app.get('/', function(req, res){
-    res.render('home');
+    res.render('atlas');
 });
 
 app.get('/champions', function(req, res){
-    res.render('about');
+    res.render('champions');
 })
 
 //-----TODO:-----
