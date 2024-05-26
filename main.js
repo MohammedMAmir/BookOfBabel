@@ -1,14 +1,44 @@
-const express = require("express");
-const app = express();
-const port = process.env.PORT || 3001;
+//-----SETUP-----
+var express = require("express");
+var app = express();
+app.set('port', process.env.PORT || 3000)
+app.use(express.static(__dirname + "/public"));
 
-app.use("/images", express.static("images"));
+//set up handlebars view engine
+var handlebars = require("express3-handlebars").create(
+    {defaultLayout: 'main'}
+);
 
-app.get("/", (req, res) => res.type('html').send(html));
+app.engine('handlebars', handlebars.engine);
+app.set('view engine', 'handlebars');
 
-const server = app.listen(port, () => console.log(`Example app listening on port ${port}!`));
+//-----VIEWS-----
+app.get('/', function(req, res){
+    res.render('atlas');
+});
 
-server.keepAliveTimeout = 120 * 1000;
-server.headersTimeout = 120 * 1000;
+app.get('/champions', function(req, res){
+    res.render('champions');
+})
 
-const html = `<h1>Hey Dingus!</h1><img src="/images/kookie.png">`
+//-----TODO:-----
+//custom 404 page
+app.use(function(req, res){
+    res.status(404);
+    res.render('404');
+});
+
+app.use(function(err, req, res, next){
+    console.error(err.stack);
+    res.type('text/plain');
+    res.status(500);
+    res.render('500');
+});
+
+app.listen(app.get('port'), function(){
+    console.log('Express started on http:localhost:' + app.get('port')+
+    '; press Ctrl-C to terminate.');
+}); 
+
+
+
