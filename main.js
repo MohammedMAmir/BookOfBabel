@@ -21,6 +21,18 @@ app.get('/champions', function(req, res){
     res.render('champions');
 })
 
+app.get('/lore', function(req, res){
+    res.render('lore');
+})
+
+app.get('/sessions', function(req, res){
+    res.render('sessions');
+})
+
+app.get('/calendar', function(req, res){
+    res.render('calendar');
+})
+
 //-----TODO:-----
 //custom 404 page
 app.use(function(req, res){

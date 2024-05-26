@@ -1,4 +1,45 @@
+:root {
+    --gold: rgb(232, 208, 153);;
+    --white: #ffffff;
+    --darkest: #01161E;
+    --darker: #124559;
+    --toolbar: #598392;
+  }
+
+  .marcellus-sc-regular {
+    font-family: "Marcellus SC", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
 .header{
     background-color: #124559;
     height: 120px;
+    width: 100%;
+    position: relative;
+}
+
+.header .navbar-brand{
+    font-size: 22px;
+    color: var(--gold);
+}
+
+.toolbar-color{
+    background-color: var(--toolbar);
+    font-size: 40px;
+}
+
+.btn-primary{
+    background-color: var(--gold);
+    color: var(--darkest);
+    border: none;
+}
+
+.btn-primary:hover{
+    background-color: var(--toolbar)
+}
+
+.background{
+    height: 2000px;
+    background-color: var(--darkest);
 }
